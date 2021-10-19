@@ -5,8 +5,8 @@ const medphioData = [
         profession: 'Medicine',
         title: 'Any kind of dieases',
         d_info: 'Medical Doctors perform health assessments, run diagnostic tests, prescribe medication.',
-        d_img: 'https://ibb.co/FWq6YtS',
-        s_img: 'https://ibb.co/2jGZTS4',
+        d_img: 'https://i.ibb.co/X4kX5Th/Doctor1.jpg',
+        s_img: 'https://i.ibb.co/wK5cf7m/Doctor-consulting-female-patient-about-pills-and-dicsussing-health-treatment-sitting-in-the-office-a.jpg',
     },
 
     {
@@ -15,8 +15,8 @@ const medphioData = [
         profession: 'Physician',
         title: 'what problems?',
         d_info: 'A physician is a general term for a doctor who has earned a medical degree.',
-        d_img: 'https://ibb.co/1mQ1j8s',
-        s_img: 'https://ibb.co/SP1qbNZ',
+        d_img: 'https://i.ibb.co/87sqt6z/Doctor4.jpg',
+        s_img: 'https://i.ibb.co/PNbBKxV/Shot-of-a-surgeon-looking-at-a-monitor-in-an-operating-room.jpg',
     },
 
     {
@@ -25,8 +25,8 @@ const medphioData = [
         profession: 'Neurosurgery',
         title: 'Head problems?',
         d_info: 'Neurosurgery is surgery of the nervous system. It is the medical specialty concerned with the diagnosis.',
-        d_img: 'https://ibb.co/2KKs5VY',
-        s_img: 'https://ibb.co/T48MYN9',
+        d_img: 'https://i.ibb.co/888dXv4/Doctor3.jpg',
+        s_img: 'https://i.ibb.co/K2qxb8T/Doctor-checking-brain-testing-result-analysis-with-modern-virtual-interface-in-laboratory-innovative.jpg',
     },
 
     {
@@ -35,8 +35,8 @@ const medphioData = [
         profession: 'Pharmacist',
         title: 'Generic issu!',
         d_info: 'Pharmacists are healthcare professionals who specialize in the right way to use, store, preserve, and provide medicine',
-        d_img: 'https://ibb.co/kMymrZK',
-        s_img: 'https://ibb.co/BVfvdcT',
+        d_img: 'https://i.ibb.co/jH5Jxth/Doctor2.jpg',
+        s_img: 'https://i.ibb.co/QFJhzpY/Pharmacist.jpg',
     },
 
     {
@@ -45,8 +45,8 @@ const medphioData = [
         profession: 'Dentist',
         title: 'For your child whitest teeths',
         d_info: 'Dentistry, also known as dental medicine and oral medicine, is a branch of medicine.',
-        d_img: 'https://ibb.co/fqc2cXh',
-        s_img: 'https://ibb.co/D1PGMVQ',
+        d_img: 'https://i.ibb.co/XjwbwWh/Doctor5.jpg',
+        s_img: 'https://i.ibb.co/p16WK0d/Dentist.jpg',
     },
 
     {
@@ -54,8 +54,9 @@ const medphioData = [
         d_name: 'Nasir Al-Din',
         profession: 'Cardiologist',
         title: 'Got a broken heart?',
-        d_img: 'https://ibb.co/k2yD7J1',
-        s_img: 'https://ibb.co/dLBzcVT',
+        d_info: 'Cardiologists are doctors who specialize in diagnosing and treating diseases or conditions of the heart and blood vessels.',
+        d_img: 'https://i.ibb.co/v4BdFhY/Doctor6.jpg',
+        s_img: 'https://i.ibb.co/4YW5fXq/Heart-shows-a-medical-worker-on-blurred-background.jpg',
     },
 
     {
@@ -63,8 +64,8 @@ const medphioData = [
         d_name: 'Khalid Ibn Yazid',
         profession: 'Surgeon',
         title: 'Broken your bones',
-        d_info: 'Cardiologists are doctors who specialize in diagnosing and treating diseases or conditions of the heart and blood vessels.',
-        s_img: 'https://ibb.co/XznXCHd',
+        d_info: 'In modern medicine, a surgeon is a physician who performs surgery. There are also surgeons in podiatry, dentistry.',
+        s_img: 'https://i.ibb.co/64KYWQp/Low-Angle-Shot-In-Operating-Room-of-Two-Surgeons-During-the-Surgery-Procedure-Bending-Over-Patient-w.jpg',
     },
 
     {
@@ -73,7 +74,7 @@ const medphioData = [
         profession: 'Psychologist',
         title: 'Oral problems?',
         d_info: 'A psychologist is a professional who practices psychology and studies normal and abnormal mental states.',
-        s_img: 'https://ibb.co/hBZHrmc',
+        s_img: 'https://i.ibb.co/GWtkG59/Hands-holding-brain-with-puzzle-paper-cutout-autism-Epilepsy-and-alzheimer-awareness-seizure-disorde.jpg',
     },
 
     {
@@ -82,6 +83,6 @@ const medphioData = [
         profession: 'Therapist',
         title: 'Neck or back pain?',
         d_info: 'A therapist is a broad designation that refers to professionals who are trained to provide treatment and rehabilitation. ',
-        s_img: 'https://ibb.co/Nyj4dSL',
+        s_img: 'https://i.ibb.co/3CNJ9z0/Female-Physiotherapist-working-examining-treating-injured-arm-of-athlete-male-patient-stretching-and.jpg',
     }
 ]

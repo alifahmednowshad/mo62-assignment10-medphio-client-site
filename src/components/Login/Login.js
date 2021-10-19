@@ -8,6 +8,14 @@ const Login = () => {
     return (
         <div>
             <h2>Login</h2>
+            <form action="">
+                <input type="email" placeholder='Email address' />
+                <br />
+                <input type="password" placeholder='Password' />
+                <br />
+                <input type="submit" value='Login' />
+                <br />
+            </form>
             <button onClick={signInUsingGoogle}>Google Sign In</button>
             <br />
             <Link to='/register'>New User?</Link>

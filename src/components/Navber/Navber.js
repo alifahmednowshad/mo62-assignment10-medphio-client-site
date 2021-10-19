@@ -7,9 +7,9 @@ const Navber = () => {
     const {user, logOut} = useFirebase();
     return (
         <div className='bg-info'>
-            <div className='d-flex container justify-content-between align-items-center'>
-                <h6>support@medphio.com</h6>
-                <div>
+            <div className='row d-flex justify-content-between align-items-center bg-info'>
+                <h6 className='col-md-4 d-sm-none d-md-block'>support@medphio.com</h6>
+                <div class="col-md-8 col-12">
                     <span>{user.displayName} </span>
                     { user?.email && <button onClick={logOut} className="btn btn-danger" type="submit">Log Out</button>}
                     <Link to='/login'><button className="btn btn-danger ms-2" type="submit">Login</button></Link>
@@ -18,7 +18,7 @@ const Navber = () => {
             </div> 
             <nav className="navbar navbar-expand-lg navbar-light m-0 p-0 bg-primary">  
                 <div className="container">
-                    <span className="navbar-brand text-white">Medphio</span>
+                    <span className="navbar-brand fs-3 m-0 p-1 text-white">Medphio</span>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

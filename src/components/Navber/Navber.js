@@ -1,16 +1,19 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useFirebase from '../../Hooks/UseFirebase';
 
 const Navber = () => {
+    const {user, logOut} = useFirebase();
     return (
         <div className='bg-info'>
-            <div className='d-flex container justify-content-between'>
+            <div className='d-flex container justify-content-between align-items-center'>
+                <h6>support@medphio.com</h6>
                 <div>
-                    <h6>support@medphio.com</h6>
-                </div>
-                <div>
-                    <button className="btn btn-danger me-2" type="submit">Login</button>
-                    <button className="btn btn-danger" type="submit">Sign Up</button>
+                    <span>{user.displayName} </span>
+                    { user?.email && <button onClick={logOut} className="btn btn-danger" type="submit">Log Out</button>}
+                    <Link to='/login'><button className="btn btn-danger ms-2" type="submit">Login</button></Link>
+                    <Link to='/register'><button className="btn btn-danger ms-2" type="submit">Register</button></Link>
                 </div>
             </div> 
             <nav className="navbar navbar-expand-lg navbar-light m-0 p-0 bg-primary">  
@@ -34,7 +37,7 @@ const Navber = () => {
                                 <Link className="nav-link text-white" to="/doctors">Doctors</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link text-white" to="/contact">Contact</Link>
+                                <Link className="nav-link text-white" to="/getInTouch">Get In Touch</Link>
                             </li>
                         </ul>
                     </div>

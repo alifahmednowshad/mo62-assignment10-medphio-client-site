@@ -6,6 +6,7 @@ import banner3 from '../../Images/banner-3.jpg';
 const Home = () => {
     return (
         <div>
+            {/* carousel area  */}
             <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -43,7 +44,10 @@ const Home = () => {
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Next</span>
                 </button>
-                </div>
+            </div>
+
+            {/* services item  */}
+            
         </div>
     );
 };

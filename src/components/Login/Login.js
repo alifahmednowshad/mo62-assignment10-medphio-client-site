@@ -8,7 +8,7 @@ const Login = () => {
     const {error, signInUsingGoogle, handleRegistration, handleEmailChange, handlePasswordChange} = useAuth();
 
     return (
-        <div className='container my-4'>
+        <div className='container mt-5 mb-5'>
             <h2 className='mb-3'>Login</h2>
 
             <div className='row'>
@@ -28,23 +28,27 @@ const Login = () => {
                             <div className="form-check">
                             <input className="form-check-input" type="checkbox" id="gridCheck"/>
                             <label className="form-check-label" htmlFor="gridCheck">
-                                <Link to='/login'>Already Register?</Link>
+                                <Link to='/register'>New user?</Link>
                             </label>
                             </div>
                         </div>
-                        <div className='text-danger'>{error}</div>
-                        <div className="col-12">
+                        <div className='text-danger mb-3 mt-0'>{error}</div>
+                        <div className="col-12 m-0">
                             <button type="submit" className="btn btn-primary w-50">Login</button>
+                        </div>
+                        <div className='row mt-4 align-items-center justify-content-between'>
+                            <div className='text-start col-7'>
+                                <h6 >You also signin here</h6>
+                            </div>
+                            <div className='col-5 p-0'>
+                                <button onClick={signInUsingGoogle} className='w-100 btn btn-danger'>Google</button>
+                            </div>
                         </div>
                     </form>
                 </div>
                 
                 <div className='col-md-3'></div>
             </div>
-            <br />
-            <button onClick={signInUsingGoogle}>Google Sign In</button>
-            <br />
-            <Link to='/register'>New User?</Link>
         </div>
     );
 };

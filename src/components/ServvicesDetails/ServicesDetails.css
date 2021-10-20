@@ -1,0 +1,11 @@
+.doctorImg{
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+}
+.icon{
+    color: purple;
+}
+.icon:hover{
+color: blue;
+}

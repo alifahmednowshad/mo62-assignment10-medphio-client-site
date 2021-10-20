@@ -10,7 +10,7 @@ const Doctors = () => {
             <div className="d-flex row my-3 g-4">
                 
                 {
-                    datas.slice(0,6).map(datum => <Doctor datum={datum}></Doctor>)
+                    datas.slice(0,6).map(datum => <Doctor key={datum.id} datum={datum}></Doctor>)
                 }
                 
             </div>

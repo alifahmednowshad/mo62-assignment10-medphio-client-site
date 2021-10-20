@@ -44,7 +44,7 @@ const About = () => {
                 <h2>BOARD OF DIRECTORS</h2>
                 <div className="d-flex row  mb-5 mt-2 g-4">
                     {
-                        datas.slice(0,3).map(datum => <Doctor datum={datum}></Doctor>)
+                        datas.slice(0,3).map(datum => <Doctor key={datum.id} datum={datum}></Doctor>)
                     }
                    
                 </div>

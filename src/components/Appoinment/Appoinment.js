@@ -4,7 +4,7 @@ const Appointment = () => {
     return (
         <div className='my-5 container rounded-3'>
             <div className='bg-info bg-opacity-50 py-5'>
-                <h2>Consgrates your appoinment aproved</h2>
+                <h2>Congrats your appoinment aproved</h2>
                 <h4>Your serial number is : 05</h4>
 
                 <div>

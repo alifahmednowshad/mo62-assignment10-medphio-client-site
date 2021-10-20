@@ -56,7 +56,7 @@ const Home = () => {
                 <div className="d-flex row mt-1 g-4">
                 
                     {
-                        datas.slice(0,6).map(datum => <Service datum={datum}></Service>)
+                        datas.slice(0,6).map(datum => <Service key={datum.id} datum={datum}></Service>)
                     }
                 
                 </div>

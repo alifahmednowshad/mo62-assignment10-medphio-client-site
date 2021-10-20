@@ -29,9 +29,9 @@ const Header = () => {
                         <Route exact path='/about'>
                             <About></About>
                         </Route>
-                        <PrivateRoute exact path='/services'>
+                        <Route exact path='/services'>
                             <Services></Services>
-                        </PrivateRoute>
+                        </Route>
                         <Route exact path='/doctors'>
                             <Doctors></Doctors>
                         </Route>

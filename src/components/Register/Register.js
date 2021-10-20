@@ -8,9 +8,11 @@ const Register = () => {
 
     return (
         <div className='container'>
-            <h2>Register</h2>
+            <h2 className='my-4'>Please Register</h2>
             <div className='row'>
                 <div className='col-md-3'></div>
+
+                {/* form  */}
                 <div className='col-12 col-md-6 py-3 '>
                     <form onSubmit={handleRegistration} className="row g-3 bg-info bg-opacity-50 rounded-3">
                         <div className="col-12 text-start">
@@ -23,7 +25,7 @@ const Register = () => {
                         </div>
                         <div className="col-6 text-start">
                             <label htmlFor="inputPassword4" className="form-label">Password</label>
-                            <input onBlur={handlePasswordChange} type="password" className="form-control" id="inputPassword4" required/>
+                            <input onBlur={handlePasswordChange} type="password" className="form-control" required/>
                         </div>
                         <div className="col-6 text-start">
                             <label htmlFor="inputPassword4" className="form-label">Re-password</label>
@@ -42,8 +44,8 @@ const Register = () => {
                             </div>
                         </div>
                         <div className='text-danger'>{error}</div>
-                        <div className="col-12">
-                            <button type="submit" className="btn btn-primary">Register</button>
+                        <div className="col-12 mb-3 mt-0">
+                            <button type="submit" className="w-50 btn btn-primary">Register</button>
                         </div>
                     </form>
                     <div className='row my-3 align-items-center justify-content-between'>

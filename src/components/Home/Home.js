@@ -3,6 +3,7 @@ import useMedphioData from '../../Hooks/useMedphioData';
 import banner1 from '../../Images/banner-1.jpg';
 import banner2 from '../../Images/banner-2.jpg';
 import banner3 from '../../Images/banner-3.jpg';
+import teamImg from '../../Images/Surgeon.jpg'
 import Service from '../Service/Service';
 
 const Home = () => {
@@ -50,13 +51,45 @@ const Home = () => {
             </div>
 
             {/* services item  */}
-            <div className='container'>
-                <div className="d-flex row my-5 g-4">
+            <div className='container my-5'>
+                <h2>Our Services</h2>
+                <div className="d-flex row mt-1 g-4">
                 
                     {
                         datas.slice(0,6).map(datum => <Service datum={datum}></Service>)
                     }
                 
+                </div>
+            </div>
+
+            {/* our team  */}
+            <div className='bg-secondary  bg-opacity-25'>
+                <div className='container py-5'>
+                    <div className='row align-items-center'>
+                        <div className='col-12 col-md-6 text-start'>
+                            <h6>Dr. Stephanie Wosniack</h6>
+                            <h1>OUR TEAM</h1>
+                            <p>Dr. Stephanie Wosniack is is dedicated to providing her patients with the best possible care. We at MediCare are focused on helping you. After receiving successful care for various aches and pains over the years, Dr. Woshiack found her calling to help others get well.</p>
+                        </div>
+                        <div className='col-12 col-md-6'>
+                            <img src={teamImg} className='img-fluid' alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* about  */}
+            <div className='container my-5 py-md-3'>
+                <div className='row'>
+                    <div className='col-12 col-md-4'>
+                        <h6>Address: Dhaka,Bangladesh</h6>
+                    </div>
+                    <div className='col-12 col-md-4'>
+                        <h6>Time: 24/7 days</h6>
+                    </div>
+                    <div className='col-12 col-md-4'>
+                        <h6>Hotline: 00144 55606</h6>
+                    </div>
                 </div>
             </div>
             

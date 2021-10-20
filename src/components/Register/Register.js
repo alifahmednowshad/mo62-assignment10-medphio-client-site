@@ -1,48 +1,64 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../Hooks/UseFirebase';
+import useAuth from '../../Hooks/UseAuth';
 
 const Register = () => {
-
-    const {error, handleRegistration, handlePasswordChange, handleEmailChange} = useFirebase();
+    
+    const {error, signInUsingGoogle, handleRegistration, handleNameChange, handlePasswordChange, handleEmailChange} = useAuth();
 
     return (
         <div className='container'>
             <h2>Register</h2>
-            <form onSubmit={handleRegistration} className="row g-3">
-                <div className="col-md-6">
-                    <label htmlFor="inputEmail4" className="form-label">Email</label>
-                    <input onBlur={handleEmailChange} type="email" className="form-control" id="inputEmail4" required/>
-                </div>
-                <div className="col-md-6">
-                    <label htmlFor="inputPassword4" className="form-label">Password</label>
-                    <input onBlur={handlePasswordChange} type="password" className="form-control" id="inputPassword4" required/>
-                </div>
-                <div className="col-12">
-                    <label htmlFor="inputAddress" className="form-label">Address</label>
-                    <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St"/>
-                </div>
-                <div className="col-12">
-                    <label htmlFor="inputAddress2" className="form-label">Address 2</label>
-                    <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"/>
-                </div>
-                <div className="col-12">
-                    <div className="form-check">
-                    <input className="form-check-input" type="checkbox" id="gridCheck"/>
-                    <label className="form-check-label" htmlFor="gridCheck">
-                        <Link to='/login'>Already Register?</Link>
-                    </label>
+            <div className='row'>
+                <div className='col-md-3'></div>
+                <div className='col-12 col-md-6 py-3 '>
+                    <form onSubmit={handleRegistration} className="row g-3 bg-info bg-opacity-50 rounded-3">
+                        <div className="col-12 text-start">
+                            <label className="form-label">Name</label>
+                            <input onBlur={handleNameChange} type="text" className="form-control" required/>
+                        </div>
+                        <div className="col-12 text-start">
+                            <label htmlFor="inputEmail4" className="form-label">Email</label>
+                            <input onBlur={handleEmailChange} type="email" className="form-control" id="inputEmail4" required/>
+                        </div>
+                        <div className="col-6 text-start">
+                            <label htmlFor="inputPassword4" className="form-label">Password</label>
+                            <input onBlur={handlePasswordChange} type="password" className="form-control" id="inputPassword4" required/>
+                        </div>
+                        <div className="col-6 text-start">
+                            <label htmlFor="inputPassword4" className="form-label">Re-password</label>
+                            <input onBlur={handlePasswordChange} type="password" className="form-control" id="inputPassword4" required/>
+                        </div>
+                        <div className="col-12 text-start">
+                            <label htmlFor="inputAddress" className="form-label">Address</label>
+                            <input type="text" className="form-control" id="inputAddress" placeholder="Give your full address"/>
+                        </div>
+                        <div className="col-12">
+                            <div className="form-check">
+                            <input className="form-check-input" type="checkbox" id="gridCheck"/>
+                            <label className="form-check-label" htmlFor="gridCheck">
+                                <Link to='/login'>Already Register?</Link>
+                            </label>
+                            </div>
+                        </div>
+                        <div className='text-danger'>{error}</div>
+                        <div className="col-12">
+                            <button type="submit" className="btn btn-primary">Register</button>
+                        </div>
+                    </form>
+                    <div className='row my-3 align-items-center justify-content-between'>
+                        <div className='text-start col-7'>
+                            <h6 >You also signin here</h6>
+                        </div>
+                        <div className='col-5'>
+                            <button onClick={signInUsingGoogle} className='w-100 btn btn-danger'>Google</button>
+                        </div>
                     </div>
                 </div>
-                <div className='text-danger'>{error}</div>
-                <div className="col-12">
-                    <button type="submit" className="btn btn-primary">Register</button>
-                </div>
-            </form>
 
-            <button>Google Sign In</button>
+                <div className='col-md-3'></div>
+            </div>
             <br />
-            <Link to='/login'>Already Register?</Link>
         </div>
     );
 };

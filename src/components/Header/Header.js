@@ -4,9 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 import AuthProvider from '../../Context/AuthProvider';
 import PrivateRoute from '../../Private/PrivateRoute';
 import About from '../About Us/About';
-import Apoint from '../Appoint/Apoint';
+import Appointment from '../Appoinment/Appoinment';
 import Doctors from '../Doctors/Doctors';
-import GetInTouch from '../GetInTouch/GetInTouch';
 import Home from '../Home/Home';
 import Login from '../Login/Login';
 import Navber from '../Navber/Navber';
@@ -36,17 +35,14 @@ const Header = () => {
                         <Route exact path='/doctors'>
                             <Doctors></Doctors>
                         </Route>
-                        <Route exact path='/getInTouch'>
-                            <GetInTouch></GetInTouch>
-                        </Route>
+                        <PrivateRoute exact path='/appoinment'>
+                            <Appointment></Appointment>
+                        </PrivateRoute>
                         <Route exact path='/login'>
                             <Login></Login>
                         </Route>
                         <Route exact path='/register'>
                             <Register></Register>
-                        </Route>
-                        <Route exact path='/apoint'>
-                            <Apoint></Apoint>
                         </Route>
                         <Route path='/*'>
                             <NotFound></NotFound>

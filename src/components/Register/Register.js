@@ -4,7 +4,7 @@ import useAuth from '../../Hooks/UseAuth';
 
 const Register = () => {
     
-    const {error, signInUsingGoogle, handleRegistration, handleNameChange, handlePasswordChange, handleEmailChange} = useAuth();
+    const {error, signInUsingGoogle, handleRegistration, handleNameChange, handlePasswordChange, handleEmailChange, toggleLogin} = useAuth();
 
     return (
         <div className='container'>
@@ -15,21 +15,18 @@ const Register = () => {
                 {/* form  */}
                 <div className='col-12 col-md-6 py-3 '>
                     <form onSubmit={handleRegistration} className="row g-3 bg-info bg-opacity-50 rounded-3">
+                    
                         <div className="col-12 text-start">
-                            <label className="form-label">Name</label>
-                            <input onBlur={handleNameChange} type="text" className="form-control" required/>
+                            <label htmlFor="inputName" className="form-label">Name</label>
+                            <input onBlur={handleNameChange} type="text" className="form-control" id="inputName" required/>
                         </div>
                         <div className="col-12 text-start">
                             <label htmlFor="inputEmail4" className="form-label">Email</label>
                             <input onBlur={handleEmailChange} type="email" className="form-control" id="inputEmail4" required/>
                         </div>
-                        <div className="col-6 text-start">
+                        <div className="col-12 text-start">
                             <label htmlFor="inputPassword4" className="form-label">Password</label>
                             <input onBlur={handlePasswordChange} type="password" className="form-control" required/>
-                        </div>
-                        <div className="col-6 text-start">
-                            <label htmlFor="inputPassword4" className="form-label">Re-password</label>
-                            <input onBlur={handlePasswordChange} type="password" className="form-control" id="inputPassword4" required/>
                         </div>
                         <div className="col-12 text-start">
                             <label htmlFor="inputAddress" className="form-label">Address</label>
@@ -37,10 +34,11 @@ const Register = () => {
                         </div>
                         <div className="col-12">
                             <div className="form-check">
-                            <input className="form-check-input" type="checkbox" id="gridCheck"/>
+                            <Link to='/login'>
+                            <input onChange={toggleLogin} className="form-check-input" type="checkbox" id="gridCheck"/>
                             <label className="form-check-label" htmlFor="gridCheck">
-                                <Link to='/login'>Already Register?</Link>
-                            </label>
+                                Already Register?
+                            </label></Link>
                             </div>
                         </div>
                         <div className='text-danger'>{error}</div>

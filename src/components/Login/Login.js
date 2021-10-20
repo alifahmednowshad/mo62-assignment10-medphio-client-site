@@ -5,7 +5,7 @@ import useAuth from '../../Hooks/UseAuth';
 
 const Login = () => {
 
-    const {error, signInUsingGoogle, handleRegistration, handleEmailChange, handlePasswordChange} = useAuth();
+    const {error, signInUsingGoogle, handleRegistration, handleEmailChange, handlePasswordChange, toggleLogin} = useAuth();
 
     return (
         <div className='container mt-5 mb-5'>
@@ -26,10 +26,12 @@ const Login = () => {
                         </div>
                         <div className="col-12">
                             <div className="form-check">
-                            <input className="form-check-input" type="checkbox" id="gridCheck"/>
+                            <Link to='/register'>
+                            <input onChange={toggleLogin} className="form-check-input" type="checkbox" id="gridCheck"/>
                             <label className="form-check-label" htmlFor="gridCheck">
-                                <Link to='/register'>New user?</Link>
+                                New user?
                             </label>
+                            </Link>
                             </div>
                         </div>
                         <div className='text-danger mb-3 mt-0'>{error}</div>

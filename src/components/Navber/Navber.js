@@ -7,9 +7,9 @@ const Navber = () => {
     const {user, logOut} = useFirebase();
     return (
         <div className='bg-info'>
-            <div className='row d-flex justify-content-between align-items-center bg-info'>
-                <h6 className='col-md-4 d-sm-none d-md-block'>support@medphio.com</h6>
-                <div class="col-md-8 col-12">
+            <div className='container d-flex justify-content-between align-items-center bg-info'>
+                <h6 className=' d-sm-none d-md-block'>support@medphio.com</h6>
+                <div className="">
                     <span>{user.displayName} </span>
                     { user?.email && <button onClick={logOut} className="btn btn-danger" type="submit">Log Out</button>}
                     <Link to='/login'><button className="btn btn-danger ms-2" type="submit">Login</button></Link>

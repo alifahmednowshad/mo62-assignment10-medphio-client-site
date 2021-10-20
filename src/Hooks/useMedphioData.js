@@ -13,6 +13,6 @@ const useMedphioData = () => {
     }, []);
     return [datas];
 };
-console.log(useMedphioData);
+
 export default useMedphioData;
 

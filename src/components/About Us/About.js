@@ -1,6 +1,6 @@
 import React from 'react';
 import useMedphioData from '../../Hooks/useMedphioData';
-import Doctors from '../Doctors/Doctors';
+import Doctor from '../Doctor/Doctor';
 
 const About = () => {
     const [datas] = useMedphioData([]);
@@ -9,7 +9,7 @@ const About = () => {
             <div className="d-flex row my-5 g-4">
                 
                 {
-                    datas.slice(0,3).map(datum => <Doctors datum={datum}></Doctors>)
+                    datas.slice(0,3).map(datum => <Doctor datum={datum}></Doctor>)
                 }
                 
             </div>

@@ -6,6 +6,7 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signO
 initializeAuthentication();
 
 const useFirebase = () => {
+
     const [user, setUser] = useState({});
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -14,6 +15,7 @@ const useFirebase = () => {
 
     const auth = getAuth();
 
+    // Google Sign In Methood 
     const googleProvider = new GoogleAuthProvider();
     const signInUsingGoogle =() => {
         signInWithPopup(auth, googleProvider)
@@ -25,22 +27,24 @@ const useFirebase = () => {
         })
     }
 
+    // Email & Password Sign In Methood 
     const toggleLogin = e => {
         setIsLogin(e.target.checked)
-      }
+    }
     
-      const handleNameChange = e => {
+    const handleNameChange = e => {
         setUser(e.target.value);
-      }
-      const handleEmailChange = e => {
+    }
+
+    const handleEmailChange = e => {
         setEmail(e.target.value);
-      }
+    }
     
-      const handlePasswordChange = e => {
-        setPassword(e.target.value)
-      }
+    const handlePasswordChange = e => {
+      setPassword(e.target.value)
+    }
     
-      const handleRegistration = e => {
+    const handleRegistration = e => {
         e.preventDefault();
         console.log(email, password);
         if (password.length < 6) {

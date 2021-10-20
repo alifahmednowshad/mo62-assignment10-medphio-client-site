@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 import AuthProvider from '../../Context/AuthProvider';
+import PrivateRoute from '../../Private/PrivateRoute';
 import About from '../About Us/About';
 import Apoint from '../Appoint/Apoint';
 import Doctors from '../Doctors/Doctors';
@@ -29,9 +30,9 @@ const Header = () => {
                         <Route exact path='/about'>
                             <About></About>
                         </Route>
-                        <Route exact path='/services'>
+                        <PrivateRoute exact path='/services'>
                             <Services></Services>
-                        </Route>
+                        </PrivateRoute>
                         <Route exact path='/doctors'>
                             <Doctors></Doctors>
                         </Route>
